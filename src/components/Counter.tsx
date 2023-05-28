@@ -58,7 +58,7 @@ const Counter = () => {
   return (
     <main className="flex min-h-fit items-start justify-between flex-wrap [&>*]:my-1 mt-2">
       <div className="flex items-center flex-col w-1/2 [&>*]:my-2">
-        <h1 className="text-center">Recep Tayip Erdoğan</h1>
+        <h1 className="text-center">Recep Tayyip Erdoğan</h1>
         <div className="text-center h-16 w-16 p-2 rounded-full bg-white text-slate-600 flex items-center justify-center">
           <p>{rte}</p>
         </div>
