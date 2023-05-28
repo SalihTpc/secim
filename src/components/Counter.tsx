@@ -2,9 +2,59 @@
 import React, { useState } from "react";
 
 const Counter = () => {
-  const [rte, setRte] = useState<number>(0);
-  const [kk, setKk] = useState<number>(0);
-  const [gecersiz, setGecersiz] = useState<number>(0);
+  const [rte, setRte] = useState<number>(
+    parseInt(localStorage.getItem("rte") || "0")
+  );
+  const [kk, setKk] = useState<number>(
+    parseInt(localStorage.getItem("kk") || "0")
+  );
+  const [gecersiz, setGecersiz] = useState<number>(
+    parseInt(localStorage.getItem("gecersiz") || "0")
+  );
+
+  const rteArttir = () => {
+    setRte((state) => state + 1);
+    localStorage.setItem("rte", JSON.stringify(rte + 1));
+  };
+  const rteAzalt = () => {
+    if (rte !== 0) {
+      setRte((state) => state - 1);
+      localStorage.setItem("rte", JSON.stringify(rte - 1));
+    }
+  };
+  const rteSifirla = () => {
+    setRte(0);
+    localStorage.setItem("rte", JSON.stringify(0));
+  };
+  const kkArttir = () => {
+    setKk((state) => state + 1);
+    localStorage.setItem("kk", JSON.stringify(kk + 1));
+  };
+  const kkAzalt = () => {
+    if (kk !== 0) {
+      setKk((state) => state - 1);
+      localStorage.setItem("kk", JSON.stringify(kk - 1));
+    }
+  };
+  const kkSifirla = () => {
+    setKk(0);
+    localStorage.setItem("kk", JSON.stringify(0));
+  };
+  const gecersizArttir = () => {
+    setGecersiz((state) => state + 1);
+    localStorage.setItem("gecersiz", JSON.stringify(gecersiz + 1));
+  };
+  const gecersizAzalt = () => {
+    if (gecersiz !== 0) {
+      setGecersiz((state) => state - 1);
+      localStorage.setItem("gecersiz", JSON.stringify(gecersiz - 1));
+    }
+  };
+  const gecersizSifirla = () => {
+    setGecersiz(0);
+    localStorage.setItem("gecersiz", JSON.stringify(0));
+  };
+
   return (
     <main className="flex min-h-fit items-start justify-between flex-wrap [&>*]:my-1 mt-2">
       <div className="flex items-center flex-col w-1/2 [&>*]:my-2">
@@ -15,19 +65,19 @@ const Counter = () => {
         <div className="flex items-center justify-around [&>*]:mx-2 flex-wrap [&>*]:my-3">
           <button
             className="py-1 px-2 bg-sky-400 rounded-lg"
-            onClick={() => setRte((state) => state + 1)}
+            onClick={rteArttir}
           >
             Arttır
           </button>
           <button
             className="py-1 px-2 bg-red-400 rounded-lg"
-            onClick={() => setRte((state) => state - 1)}
+            onClick={rteAzalt}
           >
             Azalt
           </button>
           <button
             className="py-1 px-2 bg-green-400 rounded-lg"
-            onClick={() => setRte(0)}
+            onClick={rteSifirla}
           >
             Sıfırla
           </button>
@@ -41,19 +91,16 @@ const Counter = () => {
         <div className="flex items-center justify-around [&>*]:mx-2 flex-wrap [&>*]:my-3">
           <button
             className="py-1 px-2 bg-sky-400 rounded-lg"
-            onClick={() => setKk((state) => state + 1)}
+            onClick={kkArttir}
           >
             Arttır
           </button>
-          <button
-            className="py-1 px-2 bg-red-400 rounded-lg"
-            onClick={() => setKk((state) => state - 1)}
-          >
+          <button className="py-1 px-2 bg-red-400 rounded-lg" onClick={kkAzalt}>
             Azalt
           </button>
           <button
             className="py-1 px-2 bg-green-400 rounded-lg"
-            onClick={() => setKk(0)}
+            onClick={kkSifirla}
           >
             Sıfırla
           </button>
@@ -67,19 +114,19 @@ const Counter = () => {
         <div className="flex items-center justify-around [&>*]:mx-2 flex-wrap [&>*]:my-3">
           <button
             className="py-1 px-2 bg-sky-400 rounded-lg"
-            onClick={() => setGecersiz((state) => state + 1)}
+            onClick={gecersizArttir}
           >
             Arttır
           </button>
           <button
             className="py-1 px-2 bg-red-400 rounded-lg"
-            onClick={() => setGecersiz((state) => state - 1)}
+            onClick={gecersizAzalt}
           >
             Azalt
           </button>
           <button
             className="py-1 px-2 bg-green-400 rounded-lg"
-            onClick={() => setGecersiz(0)}
+            onClick={gecersizSifirla}
           >
             Sıfırla
           </button>
