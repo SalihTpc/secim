@@ -11,7 +11,7 @@ const Explanation = () => {
         olarak geliştirilmiştir.
       </p>
       <Link
-        className="text-2xl underline"
+        className="text-2xl underline hover:text-red-500"
         href="https://github.com/SalihTpc/secim"
       >
         Kaynak
