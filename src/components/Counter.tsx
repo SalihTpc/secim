@@ -1,16 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Counter = () => {
-  const [rte, setRte] = useState<number>(
-    parseInt(localStorage.getItem("rte") || "0")
-  );
-  const [kk, setKk] = useState<number>(
-    parseInt(localStorage.getItem("kk") || "0")
-  );
-  const [gecersiz, setGecersiz] = useState<number>(
-    parseInt(localStorage.getItem("gecersiz") || "0")
-  );
+  const [rte, setRte] = useState<number>(0);
+  const [kk, setKk] = useState<number>(0);
+  const [gecersiz, setGecersiz] = useState<number>(0);
 
   const rteArttir = () => {
     setRte((state) => state + 1);
@@ -54,6 +48,12 @@ const Counter = () => {
     setGecersiz(0);
     localStorage.setItem("gecersiz", JSON.stringify(0));
   };
+
+  useEffect(() => {
+    setRte(parseInt(localStorage.getItem("rte") || "0"));
+    setKk(parseInt(localStorage.getItem("kk") || "0"));
+    setGecersiz(parseInt(localStorage.getItem("gecersiz") || "0"));
+  }, []);
 
   return (
     <main className="flex min-h-fit items-start justify-between flex-wrap [&>*]:my-1 mt-2">
