@@ -64,19 +64,19 @@ const Counter = () => {
         </div>
         <div className="flex items-center justify-around [&>*]:mx-2 flex-wrap [&>*]:my-3">
           <button
-            className="py-1 px-2 bg-sky-400 rounded-lg"
+            className="py-2 px-4 bg-sky-400 rounded-lg"
             onClick={rteArttir}
           >
             Arttır
           </button>
           <button
-            className="py-1 px-2 bg-red-400 rounded-lg"
+            className="py-2 px-4 bg-red-400 rounded-lg"
             onClick={rteAzalt}
           >
             Azalt
           </button>
           <button
-            className="py-1 px-2 bg-green-400 rounded-lg"
+            className="py-2 px-4 bg-green-400 rounded-lg"
             onClick={rteSifirla}
           >
             Sıfırla
@@ -90,16 +90,16 @@ const Counter = () => {
         </div>
         <div className="flex items-center justify-around [&>*]:mx-2 flex-wrap [&>*]:my-3">
           <button
-            className="py-1 px-2 bg-sky-400 rounded-lg"
+            className="py-2 px-4 bg-sky-400 rounded-lg"
             onClick={kkArttir}
           >
             Arttır
           </button>
-          <button className="py-1 px-2 bg-red-400 rounded-lg" onClick={kkAzalt}>
+          <button className="py-2 px-4 bg-red-400 rounded-lg" onClick={kkAzalt}>
             Azalt
           </button>
           <button
-            className="py-1 px-2 bg-green-400 rounded-lg"
+            className="py-2 px-4 bg-green-400 rounded-lg"
             onClick={kkSifirla}
           >
             Sıfırla
@@ -113,19 +113,19 @@ const Counter = () => {
         </div>
         <div className="flex items-center justify-around [&>*]:mx-2 flex-wrap [&>*]:my-3">
           <button
-            className="py-1 px-2 bg-sky-400 rounded-lg"
+            className="py-2 px-4 bg-sky-400 rounded-lg"
             onClick={gecersizArttir}
           >
             Arttır
           </button>
           <button
-            className="py-1 px-2 bg-red-400 rounded-lg"
+            className="py-2 px-4 bg-red-400 rounded-lg"
             onClick={gecersizAzalt}
           >
             Azalt
           </button>
           <button
-            className="py-1 px-2 bg-green-400 rounded-lg"
+            className="py-2 px-4 bg-green-400 rounded-lg"
             onClick={gecersizSifirla}
           >
             Sıfırla
